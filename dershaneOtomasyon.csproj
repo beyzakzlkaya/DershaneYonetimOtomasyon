@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89034AD3-FA1F-478E-AA60-BBA6F095EAED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dershaneOtomasyon</RootNamespace>
+    <AssemblyName>dershaneOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_dys.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baglanti.cs" />
+    <Compile Include="dershaneYonetimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dershaneYonetimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_Ders_programi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_Ders_programi.Designer.cs">
+      <DependentUpon>frm_ogrenci_Ders_programi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_biyoloji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_biyoloji.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_biyoloji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_cog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_cog.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_cog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_fizik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_fizik.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_fizik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_kimya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_kimya.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_kimya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_matematik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_matematik.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_matematik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_tarih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_tarih.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_tarih.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_tur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_ders_tekrar_tur.Designer.cs">
+      <DependentUpon>frm_ogrenci_ders_tekrar_tur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_devamsızlıgım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_devamsızlıgım.Designer.cs">
+      <DependentUpon>frm_ogrenci_devamsızlıgım.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_kredikarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_kredikarti.Designer.cs">
+      <DependentUpon>frm_ogrenci_kredikarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_sifre_degis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_sifre_degis.Designer.cs">
+      <DependentUpon>frm_ogrenci_sifre_degis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_taksit_fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_taksit_fatura.Designer.cs">
+      <DependentUpon>frm_ogrenci_taksit_fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_bıyolojı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_bıyolojı.Designer.cs">
+      <DependentUpon>frm_ogrenci_testler_bıyolojı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_fızık.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_fızık.Designer.cs">
+      <DependentUpon>frm_ogrenci_testler_fızık.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_kimya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_kimya.Designer.cs">
+      <DependentUpon>frm_ogrenci_testler_kimya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_matematik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_matematik.Designer.cs">
+      <DependentUpon>frm_ogrenci_testler_matematik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_tarıh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_testler_tarıh.Designer.cs">
+      <DependentUpon>frm_ogrenci_testler_tarıh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenc_testler_sonucu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenc_testler_sonucu.Designer.cs">
+      <DependentUpon>frm_ogrenc_testler_sonucu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrencı_testler_cog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrencı_testler_cog.Designer.cs">
+      <DependentUpon>frm_ogrencı_testler_cog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrencı_testler_tur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrencı_testler_tur.Designer.cs">
+      <DependentUpon>frm_ogrencı_testler_tur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_ders_programi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_ders_programi.Designer.cs">
+      <DependentUpon>frm_ogretmen_ders_programi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_maas_bilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_maas_bilgisi.Designer.cs">
+      <DependentUpon>frm_ogretmen_maas_bilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_maas_fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_maas_fatura.Designer.cs">
+      <DependentUpon>frm_ogretmen_maas_fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_ogrenciDurumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_ogrenciDurumu.Designer.cs">
+      <DependentUpon>frm_ogretmen_ogrenciDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_sifre_degis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_sifre_degis.Designer.cs">
+      <DependentUpon>frm_ogretmen_sifre_degis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_sinif_listele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_sinif_listele.Designer.cs">
+      <DependentUpon>frm_ogretmen_sinif_listele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_yatan_maas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_yatan_maas.Designer.cs">
+      <DependentUpon>frm_ogretmen_yatan_maas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_yoklama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_yoklama.Designer.cs">
+      <DependentUpon>frm_ogretmen_yoklama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_veli_ogrenci_taksit_odeme_fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_veli_ogrenci_taksit_odeme_fatura.Designer.cs">
+      <DependentUpon>frm_veli_ogrenci_taksit_odeme_fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_veli_sifre_degis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_veli_sifre_degis.Designer.cs">
+      <DependentUpon>frm_veli_sifre_degis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_velı_devamsızlıgı_gor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_velı_devamsızlıgı_gor.Designer.cs">
+      <DependentUpon>frm_velı_devamsızlıgı_gor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_velı_genel_durumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_velı_genel_durumu.Designer.cs">
+      <DependentUpon>frm_velı_genel_durumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_velı_odeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_velı_odeme.Designer.cs">
+      <DependentUpon>frm_velı_odeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetici_ogrenci_taksit_odeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetici_ogrenci_taksit_odeme.Designer.cs">
+      <DependentUpon>frm_yonetici_ogrenci_taksit_odeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetici_ogrenci_ders_programı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetici_ogrenci_ders_programı.Designer.cs">
+      <DependentUpon>frm_yonetici_ogrenci_ders_programı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetici_sinif_listesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetici_sinif_listesi.Designer.cs">
+      <DependentUpon>frm_yonetici_sinif_listesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetici_sınıf_kontenjan_durumları.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetici_sınıf_kontenjan_durumları.Designer.cs">
+      <DependentUpon>frm_yonetici_sınıf_kontenjan_durumları.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_gelır_gırısı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_gelır_gırısı.Designer.cs">
+      <DependentUpon>frm_yonetıcı_gelır_gırısı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ogrencı_odeme_bılgısı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ogrencı_odeme_bılgısı.Designer.cs">
+      <DependentUpon>frm_yonetıcı_ogrencı_odeme_bılgısı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ogretmen_maas_durumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ogretmen_maas_durumu.Designer.cs">
+      <DependentUpon>frm_yonetıcı_ogretmen_maas_durumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_raporlar.Designer.cs">
+      <DependentUpon>frm_yonetıcı_raporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_sınıf_ekle_sıl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_sınıf_ekle_sıl.Designer.cs">
+      <DependentUpon>frm_yonetıcı_sınıf_ekle_sıl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_velı_odeme_gecmısı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_velı_odeme_gecmısı.Designer.cs">
+      <DependentUpon>frm_yonetıcı_velı_odeme_gecmısı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ısten_cıkanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yonetıcı_ısten_cıkanlar.Designer.cs">
+      <DependentUpon>frm_yonetıcı_ısten_cıkanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yönetici_ogrenci_devamsızlık.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yönetici_ogrenci_devamsızlık.Designer.cs">
+      <DependentUpon>frm_yönetici_ogrenci_devamsızlık.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_öğrenci_ders_istatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_öğrenci_ders_istatistik.Designer.cs">
+      <DependentUpon>frm_öğrenci_ders_istatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_öğrenci_sınıf_istatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_öğrenci_sınıf_istatistik.Designer.cs">
+      <DependentUpon>frm_öğrenci_sınıf_istatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdersekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdersekle.Designer.cs">
+      <DependentUpon>frmdersekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKaydiSilinenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaydiSilinenler.Designer.cs">
+      <DependentUpon>FrmKaydiSilinenler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciDYSEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciDYSEkran.Designer.cs">
+      <DependentUpon>FrmOgrenciDYSEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciKayit.Designer.cs">
+      <DependentUpon>FrmOgrenciKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciKayitlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciKayitlari.Designer.cs">
+      <DependentUpon>FrmOgrenciKayitlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgretmenDYSEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgretmenDYSEkran.Designer.cs">
+      <DependentUpon>FrmOgretmenDYSEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgretmenKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgretmenKayit.Designer.cs">
+      <DependentUpon>FrmOgretmenKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgretmenKayitlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgretmenKayitlari.Designer.cs">
+      <DependentUpon>frmOgretmenKayitlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgretmenMaas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgretmenMaas.Designer.cs">
+      <DependentUpon>frmOgretmenMaas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelKayit.Designer.cs">
+      <DependentUpon>FrmPersonelKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelYetki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelYetki.Designer.cs">
+      <DependentUpon>FrmPersonelYetki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSifreDegis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSifreDegis.Designer.cs">
+      <DependentUpon>FrmSifreDegis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVeliDYSEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVeliDYSEkran.Designer.cs">
+      <DependentUpon>FrmVeliDYSEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hakkında.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_hakkında.Designer.cs">
+      <DependentUpon>frm_hakkında.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Mailekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Mailekrani.Designer.cs">
+      <DependentUpon>frm_Mailekrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_OgrenciMailEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OgrenciMailEkrani.Designer.cs">
+      <DependentUpon>frm_OgrenciMailEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_OgrenciOgretmenMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OgrenciOgretmenMail.Designer.cs">
+      <DependentUpon>frm_OgrenciOgretmenMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrencitekmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrencitekmail.Designer.cs">
+      <DependentUpon>frm_ogrencitekmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogrenci_toplu_mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogrenci_toplu_mail.Designer.cs">
+      <DependentUpon>frm_ogrenci_toplu_mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmenMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmenMail.Designer.cs">
+      <DependentUpon>frm_ogretmenMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmentekmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmentekmail.Designer.cs">
+      <DependentUpon>frm_ogretmentekmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmenVeliMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmenVeliMail.Designer.cs">
+      <DependentUpon>frm_ogretmenVeliMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmenveliMailgonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmenveliMailgonder.Designer.cs">
+      <DependentUpon>frm_ogretmenveliMailgonder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_ogr_mailgonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_ogr_mailgonder.Designer.cs">
+      <DependentUpon>frm_ogretmen_ogr_mailgonder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ogretmen_toplu_mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ogretmen_toplu_mail.Designer.cs">
+      <DependentUpon>frm_ogretmen_toplu_mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Veliogrencilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Veliogrencilerim.Designer.cs">
+      <DependentUpon>frm_Veliogrencilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VeliogretmenMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VeliogretmenMail.Designer.cs">
+      <DependentUpon>frm_VeliogretmenMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_velitekmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_velitekmail.Designer.cs">
+      <DependentUpon>frm_velitekmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_velitoplumail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_velitoplumail.Designer.cs">
+      <DependentUpon>frm_velitoplumail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_öğretmen_ders_istatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_öğretmen_ders_istatistik.Designer.cs">
+      <DependentUpon>frm_öğretmen_ders_istatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="girisEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="girisEkranı.Designer.cs">
+      <DependentUpon>girisEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciGirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciGirisEkrani.Designer.cs">
+      <DependentUpon>ogrenciGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenGirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogretmenGirisEkrani.Designer.cs">
+      <DependentUpon>ogretmenGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="veliGirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="veliGirisEkrani.Designer.cs">
+      <DependentUpon>veliGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticiDYSEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticiDYSEkran.Designer.cs">
+      <DependentUpon>yoneticiDYSEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticiGirisEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticiGirisEkran.Designer.cs">
+      <DependentUpon>yoneticiGirisEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_öğretmen_öğrenci_istatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_öğretmen_öğrenci_istatistik.Designer.cs">
+      <DependentUpon>frm_öğretmen_öğrenci_istatistik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_ogrenci_Ders_programi.resx">
+      <DependentUpon>frm_ogrenci_Ders_programi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_biyoloji.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_biyoloji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_cog.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_cog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_fizik.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_fizik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_kimya.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_kimya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_matematik.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_matematik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_tarih.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_tarih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_ders_tekrar_tur.resx">
+      <DependentUpon>frm_ogrenci_ders_tekrar_tur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_devamsızlıgım.resx">
+      <DependentUpon>frm_ogrenci_devamsızlıgım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_kredikarti.resx">
+      <DependentUpon>frm_ogrenci_kredikarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_sifre_degis.resx">
+      <DependentUpon>frm_ogrenci_sifre_degis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_taksit_fatura.resx">
+      <DependentUpon>frm_ogrenci_taksit_fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_testler_bıyolojı.resx">
+      <DependentUpon>frm_ogrenci_testler_bıyolojı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_testler_fızık.resx">
+      <DependentUpon>frm_ogrenci_testler_fızık.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_testler_kimya.resx">
+      <DependentUpon>frm_ogrenci_testler_kimya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_testler_matematik.resx">
+      <DependentUpon>frm_ogrenci_testler_matematik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_testler_tarıh.resx">
+      <DependentUpon>frm_ogrenci_testler_tarıh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenc_testler_sonucu.resx">
+      <DependentUpon>frm_ogrenc_testler_sonucu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrencı_testler_cog.resx">
+      <DependentUpon>frm_ogrencı_testler_cog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrencı_testler_tur.resx">
+      <DependentUpon>frm_ogrencı_testler_tur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_ders_programi.resx">
+      <DependentUpon>frm_ogretmen_ders_programi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_maas_bilgisi.resx">
+      <DependentUpon>frm_ogretmen_maas_bilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_maas_fatura.resx">
+      <DependentUpon>frm_ogretmen_maas_fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_ogrenciDurumu.resx">
+      <DependentUpon>frm_ogretmen_ogrenciDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_sifre_degis.resx">
+      <DependentUpon>frm_ogretmen_sifre_degis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_sinif_listele.resx">
+      <DependentUpon>frm_ogretmen_sinif_listele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_yatan_maas.resx">
+      <DependentUpon>frm_ogretmen_yatan_maas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_yoklama.resx">
+      <DependentUpon>frm_ogretmen_yoklama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_veli_ogrenci_taksit_odeme_fatura.resx">
+      <DependentUpon>frm_veli_ogrenci_taksit_odeme_fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_veli_sifre_degis.resx">
+      <DependentUpon>frm_veli_sifre_degis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_velı_devamsızlıgı_gor.resx">
+      <DependentUpon>frm_velı_devamsızlıgı_gor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_velı_genel_durumu.resx">
+      <DependentUpon>frm_velı_genel_durumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_velı_odeme.resx">
+      <DependentUpon>frm_velı_odeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetici_ogrenci_taksit_odeme.resx">
+      <DependentUpon>frm_yonetici_ogrenci_taksit_odeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetici_ogrenci_ders_programı.resx">
+      <DependentUpon>frm_yonetici_ogrenci_ders_programı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetici_sinif_listesi.resx">
+      <DependentUpon>frm_yonetici_sinif_listesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetici_sınıf_kontenjan_durumları.resx">
+      <DependentUpon>frm_yonetici_sınıf_kontenjan_durumları.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_gelır_gırısı.resx">
+      <DependentUpon>frm_yonetıcı_gelır_gırısı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_ogrencı_odeme_bılgısı.resx">
+      <DependentUpon>frm_yonetıcı_ogrencı_odeme_bılgısı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_ogretmen_maas_durumu.resx">
+      <DependentUpon>frm_yonetıcı_ogretmen_maas_durumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_raporlar.resx">
+      <DependentUpon>frm_yonetıcı_raporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_sınıf_ekle_sıl.resx">
+      <DependentUpon>frm_yonetıcı_sınıf_ekle_sıl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_velı_odeme_gecmısı.resx">
+      <DependentUpon>frm_yonetıcı_velı_odeme_gecmısı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yonetıcı_ısten_cıkanlar.resx">
+      <DependentUpon>frm_yonetıcı_ısten_cıkanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yönetici_ogrenci_devamsızlık.resx">
+      <DependentUpon>frm_yönetici_ogrenci_devamsızlık.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_öğrenci_ders_istatistik.resx">
+      <DependentUpon>frm_öğrenci_ders_istatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_öğrenci_sınıf_istatistik.resx">
+      <DependentUpon>frm_öğrenci_sınıf_istatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdersekle.resx">
+      <DependentUpon>frmdersekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaydiSilinenler.resx">
+      <DependentUpon>FrmKaydiSilinenler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciDYSEkran.resx">
+      <DependentUpon>FrmOgrenciDYSEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciKayit.resx">
+      <DependentUpon>FrmOgrenciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciKayitlari.resx">
+      <DependentUpon>FrmOgrenciKayitlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgretmenDYSEkran.resx">
+      <DependentUpon>FrmOgretmenDYSEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgretmenKayit.resx">
+      <DependentUpon>FrmOgretmenKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgretmenKayitlari.resx">
+      <DependentUpon>frmOgretmenKayitlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgretmenMaas.resx">
+      <DependentUpon>frmOgretmenMaas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelKayit.resx">
+      <DependentUpon>FrmPersonelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelYetki.resx">
+      <DependentUpon>FrmPersonelYetki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSifreDegis.resx">
+      <DependentUpon>FrmSifreDegis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVeliDYSEkran.resx">
+      <DependentUpon>FrmVeliDYSEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_hakkında.resx">
+      <DependentUpon>frm_hakkında.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Mailekrani.resx">
+      <DependentUpon>frm_Mailekrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OgrenciMailEkrani.resx">
+      <DependentUpon>frm_OgrenciMailEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OgrenciOgretmenMail.resx">
+      <DependentUpon>frm_OgrenciOgretmenMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrencitekmail.resx">
+      <DependentUpon>frm_ogrencitekmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogrenci_toplu_mail.resx">
+      <DependentUpon>frm_ogrenci_toplu_mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmenMail.resx">
+      <DependentUpon>frm_ogretmenMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmentekmail.resx">
+      <DependentUpon>frm_ogretmentekmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmenVeliMail.resx">
+      <DependentUpon>frm_ogretmenVeliMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmenveliMailgonder.resx">
+      <DependentUpon>frm_ogretmenveliMailgonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_ogr_mailgonder.resx">
+      <DependentUpon>frm_ogretmen_ogr_mailgonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ogretmen_toplu_mail.resx">
+      <DependentUpon>frm_ogretmen_toplu_mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Veliogrencilerim.resx">
+      <DependentUpon>frm_Veliogrencilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VeliogretmenMail.resx">
+      <DependentUpon>frm_VeliogretmenMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_velitekmail.resx">
+      <DependentUpon>frm_velitekmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_velitoplumail.resx">
+      <DependentUpon>frm_velitoplumail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_öğretmen_ders_istatistik.resx">
+      <DependentUpon>frm_öğretmen_ders_istatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="girisEkranı.resx">
+      <DependentUpon>girisEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciGirisEkrani.resx">
+      <DependentUpon>ogrenciGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogretmenGirisEkrani.resx">
+      <DependentUpon>ogretmenGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="veliGirisEkrani.resx">
+      <DependentUpon>veliGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticiDYSEkran.resx">
+      <DependentUpon>yoneticiDYSEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticiGirisEkran.resx">
+      <DependentUpon>yoneticiGirisEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_öğretmen_öğrenci_istatistik.resx">
+      <DependentUpon>frm_öğretmen_öğrenci_istatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\dershaneOtomasyon.exe.config" />
+    <None Include="dershaneYonetimDataSet.xsc">
+      <DependentUpon>dershaneYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dershaneYonetimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dershaneYonetimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dershaneYonetimDataSet.xss">
+      <DependentUpon>dershaneYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\dershaneOtomasyon.exe" />
+    <Content Include="bin\Debug\dershaneOtomasyon.pdb" />
+    <Content Include="logo_dys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Image\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
